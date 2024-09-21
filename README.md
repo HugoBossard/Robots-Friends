@@ -1,27 +1,57 @@
 # RobotsFriends
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+## À propos du projet
 
-## Development server
+L'objectif de ce projet est d'interoger une api existante afin de construire une application front web pour afficher, intéragir et naviguer à travers les diffèrentes routes ([documentation Swagger](https://robotsfriends.up.railway.app/docs)).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Il faut pouvoir avoir un menu principal avec la liste des robots et de pouvoir les mettres en favoris. Lors du click sur un robot, on peut voir ses informations tel que son numero de téléphone ou même son email.
 
-## Code scaffolding
+Il y a également un menu qui est composé des robots mis en favoris par la personne utilisant l'application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Deployement du serveur
 
-## Build
+Lancez ma commande `ng serve` pour un serveur en local. Navigez vers `http://localhost:4200/`. L'application va automatiquement recharchée si vous changez n'importe lequel des fichiers sources.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Aide supplémentaire 
 
-## Running unit tests
+Pour avoir plus d'aide sur Angular CLI utilisez `ng help` ou aller regarder la page [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Création des branches et nommage des commits
 
-## Running end-to-end tests
+**Langue à respecter pour le nommage** : `Français` -> Par exemple : `Ajout : Icon coeur pour mettre en favoris les robots`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Ajout : ajout d'une nouvelle fonctionnalité.
+- Modif : modification d'une fonctionnalité déjà implémentée en précisant la modification apportée.
+- Refacto : refactoring de code, de nommage. Ce qui modifie le code sans ajouter de fonctionnalités ou corriger de bugs.
+- Fix : correction de bug.
 
-## Further help
+Les noms des branches devront être en lien avec les US définis sur le board miro :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+(us1)
+
+Pour le nommage des commits, il faut respecter ce nommage afin que ce soit homogène :
+
+[Ajout, Modification, Refacto, Fix] : [message explicite court]
+
+Exemple, si je veux ajouter un commit car j'ai développé un nouveau composant -> 
+`Ajout : Composant liste robot pour afficher tout les robots de l'api`
+
+---
+
+## Nommage des composants et des fichiers
+
+**Langue à respecter pour le nommage** : `Anglais` -> par exemple : PageListRobot
+
+- Le nom des fichiers devra avoir un nommage de type Kebab Case : nom-fichier
+
+
+- Le nom des classes devra avoir un nommage de type Pascal Case: NomDeMaClasse
+
+
+- Le nom des fonctions devra avoir un nommage de type Camel Case : nomDeMaFonction
+
+
+- Le nom des constantes devra avoir un nommage de type  Snake Upper Case : NOM_DE_CONSTANTE
+
+
+- Le nom des variables devra avoir un nommage de type Camel Case : nomVariable

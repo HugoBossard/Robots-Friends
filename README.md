@@ -25,13 +25,13 @@ Pour avoir plus d'aide sur Angular CLI utilisez `ng help` ou aller regarder la p
 - Refacto : refactoring de code, de nommage. Ce qui modifie le code sans ajouter de fonctionnalités ou corriger de bugs.
 - Fix : correction de bug.
 
-Les noms des branches devront être en lien avec les US définis sur le board miro :
+Les noms des branches devront être en lien avec les US définis sur le board [miro](https://miro.com/welcomeonboard/UFJ3bk13a2xEaFVYMmE0OUdxYVowM1VvSTFuY05mNW40U3JHTmM5SktVQ2tzaDhVemRRVFRWWFBubkpoblhGOHwzNDU4NzY0NTM2MjEwNzYzOTQwfDI=?share_link_id=677541992365):
 
 (us1)
 
 Pour le nommage des commits, il faut respecter ce nommage afin que ce soit homogène :
 
-[Ajout, Modification, Refacto, Fix] : [message explicite court]
+[Ajout, Modif, Refacto, Fix] : [message explicite court]
 
 Exemple, si je veux ajouter un commit car j'ai développé un nouveau composant -> 
 `Ajout : Composant liste robot pour afficher tout les robots de l'api`

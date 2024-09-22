@@ -1,0 +1,20 @@
+<header class="fixed-top">
+    <ng-content select=".trans-header"> </ng-content>
+</header>
+<main>
+    <div class="shadow position-fixed"></div>
+    <aside>
+        <div class="scroller">
+            <ng-content select=".trans-nav"> </ng-content>
+        </div>
+    </aside>
+
+    <div class="page">
+        <div class="content">
+            <ng-content select=".trans-content"> </ng-content>
+        </div>
+    </div>
+</main>
+<footer>
+    <ng-content select=".trans-footer"> </ng-content>
+</footer>

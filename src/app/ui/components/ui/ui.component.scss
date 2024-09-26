@@ -23,12 +23,12 @@ aside {
     z-index: 1000;
     border-style: solid;
     border-color: var(--app-darklight);
-    border-width:  0px 2px;
+    border-width: 0px 0px 2px;
 
     .scroller {
-      overflow-y: auto;
-      max-height: 100vh;
-      padding-bottom: 65px;
+        overflow-y: auto;
+        max-height: 100vh;
+        padding-bottom: 65px;
     }
 }
 

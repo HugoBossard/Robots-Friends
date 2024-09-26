@@ -65,20 +65,16 @@ aside {
     flex-grow: 1;
 }
 
-footer {
-    background: var(--app-light);
-}
-
 @media (min-width: $md-breakpoint) {
     .shadow {
         display: none;
     }
 
-    .content, footer {
+    .content {
         margin-left: 250px;
     }
 
-    .close-aside .content, .close-aside footer {
+    .close-aside .content {
         margin-left: 0;
     }
 }

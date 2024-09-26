@@ -5,7 +5,7 @@ import { PageListRobotsComponent } from './pages/page-list-robots/page-list-robo
 
 const routes: Routes = [
   { path: '', component: PageListRobotsComponent },
-  { path: '/robots/:id', component: PageInfoRobotsComponent }
+  { path: 'robots/:id', component: PageInfoRobotsComponent }
 ];
 
 @NgModule({

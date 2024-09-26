@@ -10,17 +10,20 @@ header {
 }
 
 main {
-    background: var(--app-darklight);
+    background: var(--app-light);
     min-height: calc(100vh - 65px);
     padding-top: 65px;
 }
 
 aside {
-    background: var(--app-darklight2);
+    background: var(--app-light);
     width: 250px;
     min-height: 100vh;
     position: fixed;
     z-index: 1000;
+    border-style: solid;
+    border-color: var(--app-darklight);
+    border-width:  0px 2px;
 
     .scroller {
       overflow-y: auto;
@@ -28,6 +31,13 @@ aside {
       padding-bottom: 65px;
     }
 }
+
+.fixed-top {
+    border-style: solid;
+    border-color: var(--app-darklight);
+    border-width:  2px 0px;
+}
+
 .close-aside aside {
     width: 0;
     overflow: hidden;
@@ -51,7 +61,7 @@ aside {
     min-height: calc(100vh - 65px);
 }
 
-.contents {
+.content {
     flex-grow: 1;
 }
 
@@ -63,10 +73,12 @@ footer {
     .shadow {
         display: none;
     }
-    .contents, footer {
+
+    .content, footer {
         margin-left: 250px;
     }
-    .close-aside .contents, .close-aside footer {
+
+    .close-aside .content, .close-aside footer {
         margin-left: 0;
     }
 }

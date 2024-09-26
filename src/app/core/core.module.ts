@@ -9,7 +9,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [HeaderComponent, NavComponent],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, IconsModule],
   exports: [UiModule, TemplatesModule, IconsModule, HeaderComponent, NavComponent]
 })
 export class CoreModule { }

@@ -1,1 +1,22 @@
-<p>page-info-robots works !</p>
+@if(robot) {
+    <ng-container>
+        <div class="robot-info">
+            <div class="head-info">
+                <div class="img-info">
+                    <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
+                </div>
+
+                
+                <div class="base-info">
+                    <h2> {{robot.name}} </h2>
+                    <p> Email : {{robot.email}} </p>
+                    <p> Phone : {{robot.phone}} </p>
+                </div>
+            </div>
+
+            <div class="more-details">
+                <p> Country : {{robot.country}} </p>
+            </div>
+        </div>
+    </ng-container>
+}

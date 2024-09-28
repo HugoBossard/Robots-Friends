@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Robot } from '../../../core/models/robot';
 import { RobotsService } from '../../services/robots.service';
 @Component({
@@ -10,10 +11,16 @@ export class PageListRobotsComponent {
   robots!: Robot[];
 
   private robotsService = inject(RobotsService);
+  
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.robotsService.collection.subscribe((robots) => {
       this.robots = robots;
     });
+  }
+
+  getRobotInfo(robotId: String) {
+    this.router.navigate(["home", "robots", robotId]);
   }
 }

@@ -1,6 +1,6 @@
 <div class="robots">
     @for(robot of robots; track robot.id) {
-        <div class="robot">
+        <div class="robot" (click)="getRobotInfo(robot.id)">
             <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
 
             <div class="infos">

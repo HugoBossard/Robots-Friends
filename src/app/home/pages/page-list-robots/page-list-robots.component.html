@@ -1,1 +1,12 @@
-<p>page-list-robots works!</p>
+<div class="robots">
+    @for(robot of robots; track robot.id) {
+        <div class="robot">
+            <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
+
+            <div class="infos">
+                <p> {{ robot.name }} </p>
+                <p> {{ robot.email }} </p>
+            </div>
+        </div>
+    }
+</div>

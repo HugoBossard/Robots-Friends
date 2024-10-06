@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Robot } from '../../../core/models/robot';
 import { RobotsService } from '../../services/robots.service';
 
@@ -14,11 +14,17 @@ export class PageInfoRobotsComponent {
   private robotsService = inject(RobotsService);
   private activatedRoute = inject(ActivatedRoute);
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
       this.robotsService.getRobotById(params['id']).subscribe((robot) => {
         this.robot = robot;
       });
     });
+  }
+
+  goBackToHome() {
+    this.router.navigateByUrl("/home");
   }
 }

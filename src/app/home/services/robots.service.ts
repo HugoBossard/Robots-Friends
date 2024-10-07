@@ -18,4 +18,8 @@ export class RobotsService {
   public get collection() {
     return this.collection$;
   }
+
+  public getRobotById(robotId: Number): Observable<Robot> {
+    return this.http.get<Robot>(`${environment.apiUrl}/api/users/${robotId}?apiKey=${environment.apiKey}`);
+  }
 }

@@ -1,1 +1,46 @@
-<p>page-info-robots works !</p>
+@if(robot) {
+    <ng-container>
+        <button id="goBackButton" (click)="goBackToHome()">
+            <app-icon-back> </app-icon-back>
+        </button>
+
+        <div class="robot-info">
+            <div class="head-info">
+                <div class="img-info">
+                    <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
+                </div>
+
+                
+                <div class="base-info">
+                    <h2> {{robot.name}} </h2>
+                    <p> Email : {{robot.email}} </p>
+                    <p> Phone : {{robot.phone}} </p>
+                </div>
+            </div>
+
+            <h4> More Details </h4>
+
+            <div class="separator"> </div>
+
+            <div class="more-details">
+                <app-label text="Address"> </app-label>
+
+                <div class="details">
+                    <app-detail-frame title="Street" text="Street Name"> </app-detail-frame>
+
+                    <app-detail-frame title="Suite" text="Suite Name"> </app-detail-frame>
+
+                    <app-detail-frame title="City" text="City Name"> </app-detail-frame>
+
+                    <app-detail-frame title="Country" text={{robot.country}}> </app-detail-frame>
+                </div>
+
+                <app-label text="Profession" style="margin-top: 15px;"> </app-label>
+
+                <div class="details">
+                    <app-detail-frame title="Profession" text={{robot.profession}}> </app-detail-frame>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+}

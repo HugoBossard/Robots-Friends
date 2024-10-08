@@ -23,4 +23,8 @@ export class PageListRobotsComponent {
   getRobotInfo(robotId: String) {
     this.router.navigate(["home", "robots", robotId]);
   }
+
+  toggleFavorite(robot: Robot) {
+    this.robotsService.toggleInFavorite(robot.id);
+  }
 }

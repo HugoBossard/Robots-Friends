@@ -24,7 +24,7 @@ export class PageListRobotsComponent {
     this.router.navigate(["home", "robots", robotId]);
   }
 
-  toggleFavorite(robot: Robot) {
-    this.robotsService.toggleInFavorite(robot.id);
+  toggleFavorite(robotId: String) {
+    this.robotsService.toggleInFavorite(robotId);
   }
 }

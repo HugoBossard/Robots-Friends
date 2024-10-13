@@ -1,7 +1,7 @@
 <div class="robots">
     @for(robot of robots; track robot.id) {
         <div class="robot">
-            <div class="icon-right" (click)="toggleFavorite(robot)">
+            <div class="icon-right" (click)="toggleFavorite(robot.id)">
                 @if(!robot.isFavorite) {
                     <app-icon-favorite> </app-icon-favorite>
                 }

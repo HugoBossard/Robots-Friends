@@ -15,6 +15,17 @@
                     <h2> {{robot.name}} </h2>
                     <p> Email : {{robot.email}} </p>
                     <p> Phone : {{robot.phone}} </p>
+
+                    <div class="button-favorite" (click)="toggleFavorite(robot)">
+                        @if(!isFavorite.getValue()) {
+                            <app-icon-favorite class="fa-xl"> </app-icon-favorite>
+                        }
+                        @else {
+                            <app-icon-unfavorite class="fa-xl"> </app-icon-unfavorite>
+                        }
+
+                        <span> Make Favorite </span>
+                    </div>
                 </div>
             </div>
 

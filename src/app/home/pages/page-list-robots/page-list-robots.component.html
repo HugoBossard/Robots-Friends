@@ -1,12 +1,23 @@
 <div class="robots">
     @for(robot of robots; track robot.id) {
-        <div class="robot" (click)="getRobotInfo(robot.id)">
-            <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
-
-            <div class="infos">
-                <p> {{ robot.name }} </p>
-                <p> {{ robot.email }} </p>
+        <div class="robot">
+            <div class="icon-right" (click)="toggleFavorite(robot.id)">
+                @if(!robot.isFavorite) {
+                    <app-icon-favorite> </app-icon-favorite>
+                }
+                @else {
+                    <app-icon-unfavorite> </app-icon-unfavorite>
+                }
             </div>
+
+            <span style="width: 100%; height: 100%;" (click)="getRobotInfo(robot.id)">
+                <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
+
+                <div class="infos">
+                    <p> {{ robot.name }} </p>
+                    <p> {{ robot.email }} </p>
+                </div>
+            </span>
         </div>
     }
 </div>

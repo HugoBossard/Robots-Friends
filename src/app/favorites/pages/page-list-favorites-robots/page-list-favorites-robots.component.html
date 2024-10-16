@@ -1,0 +1,21 @@
+@if(robotsInFavorite) {
+    <div class="robots">
+        @if(robotsInFavorite.length > 0) {
+            @for(robot of robotsInFavorite; track robot.id) {
+                <div class="robot" (click)="getRobotInfo(robot.id)">
+                    <img src="https://www.robohash.org/{{robot.name}}?50x50" alt="{{robot.name}}" />
+        
+                    <div class="infos">
+                        <p> {{ robot.name }} </p>
+                        <p> {{ robot.email }} </p>
+                    </div>
+                </div>
+            }
+        }
+        @else {
+            <div style="margin-top: 150px;">
+                <p> Aucuns robots a été mis en favoris </p>
+            </div>
+        }
+    </div>
+}

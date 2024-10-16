@@ -46,4 +46,8 @@ export class RobotsService {
     )
     .subscribe();
   }
+
+  public getRobotsInFavorite() {
+    return this.http.get<Robot[]>(`${environment.apiUrl}/api/users/favorites?apiKey=${environment.apiKey}`);
+  }
 }

@@ -56,3 +56,35 @@
     cursor: pointer;
     z-index: 2;
 }
+
+.filters {
+    width: min(70%);
+    height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.filter, .active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 112px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.filter {
+    border: 2px solid var(--app-pinklight);
+}
+
+.active {
+    background-color: var(--app-pink);
+    border: 0px;
+
+    p {
+        color: var(--app-light);
+    }
+}

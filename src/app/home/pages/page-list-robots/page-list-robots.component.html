@@ -2,6 +2,10 @@
     <div>
         <div style="margin-left: 20px;">
             <h3> Filter by Country </h3>
+
+            <input class="search_bar" placeholder="Search a friend" aria-label="input" (input)="applyNameFilter($event)" />
+
+            <app-icon-search> </app-icon-search>
     
             <div class="filters">
                 @for(country of robotsCountry; track $index) {

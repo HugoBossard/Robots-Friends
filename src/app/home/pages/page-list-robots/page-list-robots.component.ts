@@ -54,16 +54,29 @@ export class PageListRobotsComponent {
     }
 
     if(countryChanged) {
-      this.applyFilter(countrySelected);
+      this.applyCountryFilter(countrySelected);
     }
     else {
       this.removeFilter();
     }
   }
 
-  applyFilter(countrySelected: String) {
+  applyCountryFilter(countrySelected: String) {
     this.robotsService.collection.subscribe((robots) => {
       this.robots.next(robots.filter((robot) => robot.country === countrySelected));
+    });
+  }
+
+  applyNameFilter(event: Event) {
+    const robotName = (event.currentTarget as HTMLInputElement).value;
+
+    if (robotName.length === 0) {
+      this.removeFilter();
+      return;
+    }
+
+    this.robotsService.collection.subscribe((robots) => {
+      this.robots.next(robots.filter((robot) => robot.name.toLowerCase().includes(robotName.toLowerCase())));
     });
   }
 
